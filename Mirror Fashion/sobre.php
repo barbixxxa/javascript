@@ -1,19 +1,14 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Sobre a Mirror Fashion</title>
-	<link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" href="css/sobre.css">
-</head>
+<?php
+$cabecalho_title = "Sobre a Mirror Fashion";
+$cabecalho_css = '<link rel="stylesheet" href="css/sobre.css">'; 
+
+include("cabecalho.php");
+?>
 <body>
-	<img src="img/logo.png">
-	<h1>A Mirror Fashion</h1>
 
 	<p>
 		A <strong>Mirror Fashion</strong> é a maior empresa comércio eletrônico no segmento de moda em todo o mundo. 
-		Fundada em 1932, possui filiais em 124 países, sendo líder de mercado com mais de 90% de 
+		Fundada há <?php print date("Y") - 1932; ?> anos, possui filiais em 124 países, sendo líder de mercado com mais de 90% de 
 		participação em 118 deles.
 	</p>
 
@@ -96,10 +91,6 @@
 	</ul>
 
 
-	<div id="rodape">
-		<img src="img/logo.png">
-
-		&copy; Copyright Mirror Fashion
-	</div>
+	<?php include("rodape.php"); ?>
 </body>
 </html>
