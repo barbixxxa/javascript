@@ -5,7 +5,7 @@
 	<title><?php print $cabecalho_title; ?></title>
 
 	<link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" href="css/estilos.css">
+	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/mobile.css" media="(max-width: 939px)">
 	<?php print @$cabecalho_css; ?>
 
@@ -14,7 +14,7 @@
 <body>
 	<header class="container">
 		<h1>
-			<img src="img/logo.png" alt="Mirror Fashion">
+			<a href="index.php"><img src="img/logo.png" alt="Mirror Fashion"></a>
 		</h1>
 		<p class="sacola">
 			Nenhum item na sacola de compras

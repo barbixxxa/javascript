@@ -1,3 +1,5 @@
+<link href='http://fonts.googleapis.com/css?family=PT+Sans|Bad+Script' 
+rel='stylesheet'>
 <?php
 $cabecalho_title = "Mirror Fashion";
 
@@ -45,142 +47,60 @@ include("cabecalho.php");
      <section class="painel novidades">
        <h2>Novidades</h2>
        <ol>
-         <!-- primeiro produto -->
-         <li>
-           <a href="produto.html">
-             <figure>
-               <img src="img/produtos/miniatura1.png">
-               <figcaption>Fuzz Cardigan por R$ 129,90</figcaption>
-             </figure>
-           </a>
-         </li>
+         <?php
+         $conexao = mysqli_connect("127.0.0.1", "root", "", "WD43");
+         $dados = mysqli_query($conexao, "SELECT * FROM produtos ORDER BY data DESC LIMIT 0, 12");
 
-         <li>
-           <a href="produto.html">
-             <figure>
-               <img src="img/produtos/miniatura2.png">
-               <figcaption>Fuzz Cardigan por R$ 129,90</figcaption>
-             </figure>
-           </a>
-         </li>
-         <li>
-           <a href="produto.html">
-             <figure>
-               <img src="img/produtos/miniatura3.png">
-               <figcaption>Fuzz Cardigan por R$ 129,90</figcaption>
-             </figure>
-           </a>
-         </li>
-         <li>
-           <a href="produto.html">
-             <figure>
-               <img src="img/produtos/miniatura4.png">
-               <figcaption>Fuzz Cardigan por R$ 129,90</figcaption>
-             </figure>
-           </a>
-         </li>
-         <li>
-           <a href="produto.html">
-             <figure>
-               <img src="img/produtos/miniatura5.png">
-               <figcaption>Fuzz Cardigan por R$ 129,90</figcaption>
-             </figure>
-           </a>
-         </li>
-         <li>
-           <a href="produto.html">
-             <figure>
-               <img src="img/produtos/miniatura6.png">
-               <figcaption>Fuzz Cardigan por R$ 129,90</figcaption>
-             </figure>
-           </a>
-         </li>
-         <li>
-           <a href="produto.html">
-             <figure>
-               <img src="img/produtos/miniatura7.png">
-               <figcaption>Fuzz Cardigan por R$ 129,90</figcaption>
-             </figure>
-           </a>
-         </li>
+         while ($produto = mysqli_fetch_array($dados)):
+           ?>
+
+           <li>
+             <a href="produto.php?id=<?= $produto['id'] ?>">
+               <figure>
+                 <img src="img/produtos/miniatura<?= $produto['id'] ?>.png"
+                 alt="<?= $produto['nome'] ?>">
+                 <figcaption><?= $produto['nome'] ?> por <?= $produto['preco'] ?></figcaption>
+               </figure>
+             </a>
+           </li>
+
+         <?php endwhile; ?>   
        </ol>
+       <button type="button">Mostrar mais</button>
      </section>
 
      <section class="painel mais-vendidos">
        <h2>Mais Vendidos</h2>
        <ol>
-         <li>
-           <a href="produto.html">
-             <figure>
-               <img src="img/produtos/miniatura8.png">
-               <figcaption>Fuzz Cardigan por R$ 129,90</figcaption>
-             </figure>
-           </a>
-         </li>
+         <?php
+         $conexao = mysqli_connect("127.0.0.1", "root", "", "WD43");
+         $dados = mysqli_query($conexao, "SELECT * FROM produtos ORDER BY vendas DESC LIMIT 0, 12");
 
-         <li>
-           <a href="produto.html">
-             <figure>
-               <img src="img/produtos/miniatura9.png">
-               <figcaption>Fuzz Cardigan por R$ 129,90</figcaption>
-             </figure>
-           </a>
-         </li>
-         <li>
-           <a href="produto.html">
-             <figure>
-               <img src="img/produtos/miniatura10.png">
-               <figcaption>Fuzz Cardigan por R$ 129,90</figcaption>
-             </figure>
-           </a>
-         </li>
-         <li>
-           <a href="produto.html">
-             <figure>
-               <img src="img/produtos/miniatura11.png">
-               <figcaption>Fuzz Cardigan por R$ 129,90</figcaption>
-             </figure>
-           </a>
-         </li>
-         <li>
-           <a href="produto.html">
-             <figure>
-               <img src="img/produtos/miniatura12.png">
-               <figcaption>Fuzz Cardigan por R$ 129,90</figcaption>
-             </figure>
-           </a>
-         </li>
-         <li>
-           <a href="produto.html">
-             <figure>
-               <img src="img/produtos/miniatura13.png">
-               <figcaption>Fuzz Cardigan por R$ 129,90</figcaption>
-             </figure>
-           </a>
-         </li>
-         <li>
-           <a href="produto.html">
-             <figure>
-               <img src="img/produtos/miniatura14.png">
-               <figcaption>Fuzz Cardigan por R$ 129,90</figcaption>
-             </figure>
-           </a>
-         </li>
-         <li>
-           <a href="produto.html">
-             <figure>
-               <img src="img/produtos/miniatura15.png">
-               <figcaption>Fuzz Cardigan por R$ 129,90</figcaption>
-             </figure>
-           </a>
-         </li>
+         while ($produto = mysqli_fetch_array($dados)):
+           ?>
+
+           <li>
+             <a href="produto.php?id=<?= $produto['id'] ?>">
+               <figure>
+                 <img src="img/produtos/miniatura<?= $produto['id'] ?>.png"
+                 alt="<?= $produto['nome'] ?>">
+                 <figcaption><?= $produto['nome'] ?> por <?= $produto['preco'] ?></figcaption>
+               </figure>
+             </a>
+           </li>
+
+         <?php endwhile; ?> 
        </ol>
+       <button type="button">Mostrar mais</button>
      </section>
    </div>
 
    <?php include("rodape.php"); ?>
 
-
-<script type="text/javascript" src="js/banner.js"></script>
+   
+   
  </body>
+ <script src="js/jquery.js"></script>
+ <script src="js/home.js"></script>
+ <script type="text/javascript" src="js/banner.js"></script>
  </html>

@@ -1,11 +1,12 @@
+
 <?php
-$cabecalho_title = "Sobre a Mirror Fashion";
-$cabecalho_css = '<link rel="stylesheet" href="css/sobre.css">'; 
+$cabecalho_title = "Mirror Fashion";
+$cabecalho_css = '<link rel="stylesheet" href="css/about.css">'; 
 
 include("cabecalho.php");
 ?>
-<body>
 
+<body>
 	<p>
 		A <strong>Mirror Fashion</strong> é a maior empresa comércio eletrônico no segmento de moda em todo o mundo. 
 		Fundada há <?php print date("Y") - 1932; ?> anos, possui filiais em 124 países, sendo líder de mercado com mais de 90% de 
@@ -89,6 +90,13 @@ include("cabecalho.php");
 			Mais de um milhão de funcionários em todo o mundo
 		</li>
 	</ul>
+	
+	<iframe id="videoMirror" height="300" width="400" src="https://www.youtube.com/embed/Tb06abHE4hY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen ></iframe>
+	<iframe id="maps" width="425" height="350" frameborder="0" 
+	scrolling="no" marginheight="0" marginwidth="0" 
+	src="http://maps.google.com.br/maps?q=Jacarezinho&amp;output=embed"></iframe>
+	
+	
 
 
 	<?php include("rodape.php"); ?>
