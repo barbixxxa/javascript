@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+
+  <title>Hello, world!</title>
+</head>
+
+<body>
+  <div class="jumbotron">
+    <div>
+      <h1 class="display-4">Hello, world!</h1>
+      <p class="lead">This is a simple etanol price calculator.</p>
+      <hr class="my-4">
+      <p>It calculates the maximum price of the liter of ethanol, based on the liter price of gasoline.</p>
+    </div>
+
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text">R$</span>
+      </div>
+      <input type="number" class="form-control" name="gasPrice" placeholder="Insert the Gasoline price">
+      <div class="col-md-2 ">
+        <a class="btn btn-primary btn-lg" href="#" role="button" onclick="calculate()">Calculate!</a>
+      </div>
+    </div>
+    <input class="form-control" type="text" name="answer" placeholder="Ethanol maximum price" readonly>
+
+    <hr class="my-4">
+
+    <p>It calculates the price of the kilometer/liter of ethanol and gasoline, based on your fuel consumption.</p>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text">R$</span>
+      </div>
+      <input type="number" class="form-control" name="gasPrice" placeholder="Insert the Gasoline price">
+      <div class="col-md-2 ">
+        <a class="btn btn-primary btn-lg" href="#" role="button" onclick="calculate()">Calculate!</a>
+      </div>
+    </div>
+    <input class="form-control" type="text" name="answer" placeholder="Ethanol maximum price" readonly>
+
+    <hr class="my-4">
+
+  </div>
+
+  <!-- Optional JavaScript -->
+  <script type="text/javascript" src="js/petroil.js"></script>
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
